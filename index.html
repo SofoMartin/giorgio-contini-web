@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgio Contini | Diseño, Restauración Arquitectónica y Arte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Giorgio Contini</h1>
+        </div>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Giorgio Contini</h2>
+        <p>Diseño, Restauración Arquitectónica & Conservación de Arte</p>
+        <a href="#contacto" class="btn-dorado">Solicitar Presupuesto</a>
+    </section>
+
+    <section id="trayectoria">
+        <h2 class="titulo-seccion">Trayectoria Profesional</h2>
+        <div class="perfil-contenedor">
+            <div class="perfil-texto">
+                <p>
+                    Con una sólida vocación por la preservación del patrimonio histórico y el diseño clásico, 
+                    mi enfoque se centra en aplicar las técnicas tradicionales de los procesos artesanales europeos 
+                    en la restauración y puesta en valor de casas particulares y departamentos antiguos de categoría.
+                </p>
+                <p>
+                    A lo largo de mi carrera, me he dedicado al cuidado y mantenimiento de fachadas, interiores de viviendas 
+                    y elementos decorativos históricos. Mi compromiso es devolver el aspecto original a cada pieza y espacio, 
+                    garantizando que el legado arquitectónico y pictórico se conserve de forma correcta con el paso del tiempo.
+                </p>
+                
+                <div class="destaque-roma">
+                    <h4>Formación Especializada en Roma, Italia</h4>
+                    <p>Especialización técnica en <strong>Restauración de Edificios Antiguos</strong> realizada en Roma, Italia (1967-1969).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2 class="titulo-seccion">Servicios Especializados</h2>
+        <div class="servicios-grid">
+            
+            <div class="servicio-card">
+                <h3>Restauración Arquitectónica</h3>
+                <p>Planificación y diseño personalizado para la puesta en valor de casas y departamentos. Coordino y superviso un equipo de trabajo técnico para ejecutar la obra con precisión.</p>
+            </div>
+            
+            <div class="servicio-card">
+                <h3>Supervisión y Conservación de Arte</h3>
+                <p>Dominio de diversas técnicas de restauración y limpieza de pinturas y piezas deterioradas. Realizo también la creación de obras pictóricas de mi propia autoría.</p>
+            </div>
+            
+            <div class="servicio-card">
+                <h3>Restauración de Marcos</h3>
+                <p>Trabajo artesanal de reparación, conservación de marcos y dorados antiguos de todo tipo.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="titulo-seccion">Proyectos y Portfolio</h2>
+        
+        <div class="filtros-portfolio">
+            <button class="btn-filtro activo" data-filtro="arquitectura">Arquitectura</button>
+            <button class="btn-filtro" data-filtro="arte">Arte y Marcos</button>
+            <button class="btn-filtro" data-filtro="autoria">Obra de Autoría</button>
+        </div>
+
+        <div class="galeria-grid">
+            <div class="carrusel-arq-wrapper galeria-item" data-categoria="arquitectura">
+                <div class="carrusel-arq-grid" id="carrusel-grid">
+                    <div class="carrusel-estado activo-estado" id="estado-antes">
+                        <div class="galeria-item-foto">
+                            <img src="img/arquiantes 1.jpeg" alt="Antes - Restauración de inmueble 1">
+                        </div>
+                        <div class="galeria-item-foto">
+                            <img src="img/arquiantes 2.jpeg" alt="Antes - Restauración de inmueble 2">
+                        </div>
+                        <div class="galeria-item-foto">
+                            <img src="img/arquiantes 3.jpeg" alt="Antes - Restauración de inmueble 3">
+                        </div>
+                        <div class="galeria-item-foto">
+                            <img src="img/arquiantes 4.jpeg" alt="Antes - Restauración de inmueble 4">
+                        </div>
+                    </div>
+                    <div class="carrusel-estado" id="estado-despues">
+                        <div class="galeria-item-foto">
+                            <img src="img/arquitectura 1.jpeg" alt="Después - Restauración de inmueble 1">
+                        </div>
+                        <div class="galeria-item-foto">
+                            <img src="img/arquitectura 2.jpeg" alt="Después - Restauración de inmueble 2">
+                        </div>
+                        <div class="galeria-item-foto">
+                            <img src="img/arquitectura 3.jpeg" alt="Después - Restauración de inmueble 3">
+                        </div>
+                        <div class="galeria-item-foto">
+                            <img src="img/arquitectura 4.jpeg" alt="Después - Restauración de inmueble 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carrusel-controles-inferiores">
+                    <button class="carrusel-flecha" id="carrusel-prev" aria-label="Ver Antes">&#8592;</button>
+                    <div class="carrusel-etiqueta" id="carrusel-etiqueta">Restauración de inmuebles - Antes</div>
+                    <button class="carrusel-flecha" id="carrusel-next" aria-label="Ver Después">&#8594;</button>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arquitectura" style="grid-column: 1 / -1; margin-top: 2rem;">
+                <div class="video-contenedor">
+                    <iframe src="https://www.youtube.com/embed/wGQtU9xlPjw" title="Giorgio Contini - Video de Restauración" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/espejo roto.jpeg" alt="Espejo antiguo roto - Estado inicial">
+                <div class="galeria-overlay">
+                    <h4>Espejo Antiguo (Antes)</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/espejo restauracion.jpeg" alt="Espejo restaurado - Estado final">
+                <div class="galeria-overlay">
+                    <h4>Espejo Antiguo (Después)</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/marco 1.jpeg" alt="Restauración de marco 1">
+                <div class="galeria-overlay">
+                    <h4>Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/marco 2.jpeg" alt="Restauración de marco 2">
+                <div class="galeria-overlay">
+                    <h4>Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/marco 3.jpeg" alt="Restauración de marco 3">
+                <div class="galeria-overlay">
+                    <h4>Marco</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/La biela antes.jpg" alt="La Biela - Antes de la restauración">
+                <div class="galeria-overlay">
+                    <h4>La biela</h4>
+                    <p>antes de la restauración</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/la biela 1.jpeg" alt="La Biela - Restauración 1">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/la biela 2.jpeg" alt="La Biela - Restauración 2">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/la biela 3.jpeg" alt="La Biela - Restauración 3">
+                <div class="galeria-overlay">
+                     <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/La biela 4.jpeg" alt="La Biela - Restauración 4">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta</p>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/negros venecianos.jpeg" alt="Negros Venecianos - Obra original de Giorgio Contini">
+                <div class="galeria-overlay">
+                    <h4>Negros Venecianos</h4>
+                    <p>Obra original de autoría propia</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/negros venecianos 2.jpeg" alt="Negros Venecianos 2 - Obra original de Giorgio Contini">
+                <div class="galeria-overlay">
+                    <h4>Negros Venecianos</h4>
+                    <p>Obra original de autoría propia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <div class="contacto-contenedor">
+            <div class="info-contacto">
+                <h3>Contacto Profesional</h3>
+                <p><span>Correo Electrónico:</span><a href="mailto:giorgiocontini141@gmail.com" class="link-contacto">giorgiocontini141@gmail.com</a></p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.linkedin.com/in/jorge-giorgio-guillermo-contini-441492409/" target="_blank" class="btn-dorado btn-linkedin">Ver Perfil en LinkedIn</a>
+                </div>
+                
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--texto-mutado);">Disponible para peritajes, consultas de restauración y colaboraciones con estudios de arquitectura, anticuarios e instituciones.</p>
+            </div>
+            <div>
+                <form class="formulario-contacto" id="formContacto">
+                    <div class="form-grupo">
+                        <input type="text" id="nombre" placeholder="Su Nombre y Apellido" required>
+                    </div>
+                    <div class="form-grupo">
+                        <input type="email" id="email" placeholder="Su Correo Electrónico" required>
+                    </div>
+                    <div class="form-grupo">
+                        <textarea id="mensaje" rows="5" placeholder="Detalles de la obra, edificio o proyecto a restaurar..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-dorado">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Giorgio Contini - Arquitectura, Diseño y Restauración. Buenos Aires, Argentina.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
