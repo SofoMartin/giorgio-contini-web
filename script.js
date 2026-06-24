@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inicializa mostrando arquitectura por defecto
-    aplicarFiltro('arquitectura');
+    // CORRECCIÓN: Inicializa mostrando 'arte' por defecto en lugar de 'arquitectura'
+    aplicarFiltro('arte');
 
     botonesFiltro.forEach(boton => {
         boton.addEventListener('click', () => {
