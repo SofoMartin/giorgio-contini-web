@@ -35,7 +35,7 @@
         <a href="#contacto" class="btn-dorado">Solicitar Presupuesto</a>
     </section>
 
-    <section id="trayectoria">
+<section id="trayectoria">
         <h2 class="titulo-seccion">Trayectoria Profesional</h2>
         <div class="perfil-contenedor">
             <div class="perfil-texto">
@@ -47,12 +47,19 @@
                 <p>
                     A lo largo de mi carrera, me he dedicado al cuidado y mantenimiento de fachadas, interiores de viviendas 
                     y elementos decorativos históricos. Mi compromiso es devolver el aspecto original a cada pieza y espacio, 
-                    garantizando que el legado arquitectónico y pictórico se conserve de forma correcta con el paso del tiempo.
+                    garantizando que el legado arquitectónico y escultórico se conserve de forma correcta con el paso del tiempo.
                 </p>
                 
+                <!-- Contenedor con todos los títulos de formación usando el estilo existente -->
                 <div class="destaque-roma">
-                    <h4>Formación Especializada en Roma, Italia</h4>
-                    <p>Especialización técnica en <strong>Restauración de Edificios Antiguos</strong> realizada en Roma, Italia (1967-1969).</p>
+                    <h4>Formación Especializada</h4>
+                    <p style="margin-bottom: 0.8rem;">• Análisis Técnico II <strong>(2010)</strong>.</p>
+                    <p style="margin-bottom: 0.8rem;">• Metastock Ejecutivos de Finanzas <strong>(2010)</strong>.</p>
+                    <p style="margin-bottom: 0.8rem;">• Análisis Técnico I Bursátil <strong>(2008)</strong>.</p>
+                    <p style="margin-bottom: 0.8rem;">• Experto en Mercado Bursátil - MERVAL AR <strong>(2007)</strong>.</p>
+                    <p style="margin-bottom: 0.8rem;">• Operador Bursátil - MERVAL AR <strong>(2006)</strong>.</p>
+                    <p style="margin-bottom: 0.8rem;">• Licenciatura en Real Estates - USA <strong>(2001)</strong>.</p>
+                    <p>• Especialización técnica en <strong>Restauración de Edificios Antiguos</strong> realizada en Roma, Italia (1967-1969).</p>
                 </div>
             </div>
         </div>
@@ -69,7 +76,7 @@
             
             <div class="servicio-card">
                 <h3>Supervisión y Conservación de Arte</h3>
-                <p>Dominio de diversas técnicas de restauración y limpieza de pinturas y piezas deterioradas. Realizo también la creación de obras pictóricas de mi propia autoría.</p>
+                <p>Dominio de diversas técnicas de restauración y limpieza de pinturas y piezas deterioradas. Realizo también la creación de obras escultóricas de mi propia autoría.</p>
             </div>
             
             <div class="servicio-card">
@@ -84,12 +91,13 @@
         <h2 class="titulo-seccion">Proyectos y Portfolio</h2>
         
         <div class="filtros-portfolio">
-            <button class="btn-filtro activo" data-filtro="arquitectura">Arquitectura</button>
-            <button class="btn-filtro" data-filtro="arte">Arte y Marcos</button>
+            <button class="btn-filtro" data-filtro="arquitectura">Arquitectura</button>
+            <button class="btn-filtro activo" data-filtro="arte">Arte y Marcos</button>
             <button class="btn-filtro" data-filtro="autoria">Obra de Autoría</button>
         </div>
 
         <div class="galeria-grid">
+            <!-- APARTADO ARQUITECTURA -->
             <div class="carrusel-arq-wrapper galeria-item" data-categoria="arquitectura">
                 <div class="carrusel-arq-grid" id="carrusel-grid">
                     <div class="carrusel-estado activo-estado" id="estado-antes">
@@ -129,12 +137,36 @@
                 </div>
             </div>
 
+            <!-- Nuevas imágenes de arquitectura agregadas antes del video -->
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/camioneta.jpg" alt="Camioneta de Roma para las reformas de edificios y departamentos">
+                <div class="galeria-overlay">
+                    <h4>Camioneta de Roma</h4>
+                    <p>para las reformas de edificios y departamentos</p>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/noticia.jpg" alt="Nota periodística sobre Giorgio Contini">
+                <div class="galeria-overlay">
+                    <h4>Nota periodística</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/noticia 2.jpg" alt="Nota periodística sobre Giorgio Contini">
+                <div class="galeria-overlay">
+                    <h4>Nota periodística</h4>
+                </div>
+            </div>
+
             <div class="galeria-item" data-categoria="arquitectura" style="grid-column: 1 / -1; margin-top: 2rem;">
                 <div class="video-contenedor">
                     <iframe src="https://www.youtube.com/embed/wGQtU9xlPjw" title="Giorgio Contini - Video de Restauración" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
 
+            <!-- APARTADO ARTE Y MARCOS -->
             <div class="galeria-item" data-categoria="arte">
                 <img src="img/espejo roto.jpeg" alt="Espejo antiguo roto - Estado inicial">
                 <div class="galeria-overlay">
@@ -203,6 +235,7 @@
                 </div>
             </div>
 
+            <!-- APARTADO OBRA DE AUTORÍA -->
             <div class="galeria-item" data-categoria="autoria">
                 <img src="img/negros venecianos.jpeg" alt="Negros Venecianos - Obra original de Giorgio Contini">
                 <div class="galeria-overlay">
@@ -215,6 +248,20 @@
                 <div class="galeria-overlay">
                     <h4>Negros Venecianos</h4>
                     <p>Obra original de autoría propia</p>
+                </div>
+            </div>
+
+            <!-- Nueva imagen de agradecimiento agregada antes del video -->
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/agradecimiento.jpg" alt="Agradecimiento a José Luis">
+                <div class="galeria-overlay">
+                    <h4>Agradecimiento a Jose Luis</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="autoria" style="grid-column: 1 / -1; margin-top: 2rem;">
+                <div class="video-contenedor">
+                    <iframe src="https://www.youtube.com/embed/fqDfW-lo7PU" title="Giorgio Contini - Video de agradecimientos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
