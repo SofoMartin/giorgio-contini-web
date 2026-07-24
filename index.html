@@ -18,24 +18,24 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        <nav class="nav-container">
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#trayectoria">Trayectoria</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+            <nav class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#trayectoria">Trayectoria</a></li>
+                    <li><a href="#portfolio">Galería de Trabajos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
     </header>
 
     <section id="inicio">
         <h2>Giorgio Contini</h2>
-        <p>Diseño, Restauración Arquitectónica & Conservación de Arte</p>
+        <p>Diseño, Conservación de Arte & Restauración Arquitectónica</p>
         <a href="#contacto" class="btn-dorado">Solicitar Presupuesto</a>
     </section>
 
-<section id="trayectoria">
+    <!-- SECCIÓN TRAYECTORIA -->
+    <section id="trayectoria">
         <h2 class="titulo-seccion">Trayectoria Profesional</h2>
         <div class="perfil-contenedor">
             <div class="perfil-texto">
@@ -49,209 +49,119 @@
                     y elementos decorativos históricos. Mi compromiso es devolver el aspecto original a cada pieza y espacio, 
                     garantizando que el legado arquitectónico y escultórico se conserve de forma correcta con el paso del tiempo.
                 </p>
-                
-                <!-- Contenedor con todos los títulos de formación usando el estilo existente -->
-                <div class="destaque-roma">
-                    <h4>Formación Especializada</h4>
-                    <p style="margin-bottom: 0.8rem;">• Análisis Técnico II <strong>(2010)</strong>.</p>
-                    <p style="margin-bottom: 0.8rem;">• Metastock Ejecutivos de Finanzas <strong>(2010)</strong>.</p>
-                    <p style="margin-bottom: 0.8rem;">• Análisis Técnico I Bursátil <strong>(2008)</strong>.</p>
-                    <p style="margin-bottom: 0.8rem;">• Experto en Mercado Bursátil - MERVAL AR <strong>(2007)</strong>.</p>
-                    <p style="margin-bottom: 0.8rem;">• Operador Bursátil - MERVAL AR <strong>(2006)</strong>.</p>
-                    <p style="margin-bottom: 0.8rem;">• Licenciatura en Real Estates - USA <strong>(2001)</strong>.</p>
-                    <p>• Especialización técnica en <strong>Restauración de Edificios Antiguos</strong> realizada en Roma, Italia (1967-1969).</p>
-                </div>
             </div>
         </div>
     </section>
 
-    <section id="servicios">
-        <h2 class="titulo-seccion">Servicios Especializados</h2>
-        <div class="servicios-grid">
-            
-            <div class="servicio-card">
-                <h3>Restauración Arquitectónica</h3>
-                <p>Planificación y diseño personalizado para la puesta en valor de casas y departamentos. Coordino y superviso un equipo de trabajo técnico para ejecutar la obra con precisión.</p>
-            </div>
-            
-            <div class="servicio-card">
-                <h3>Supervisión y Conservación de Arte</h3>
-                <p>Dominio de diversas técnicas de restauración y limpieza de pinturas y piezas deterioradas. Realizo también la creación de obras escultóricas de mi propia autoría.</p>
-            </div>
-            
-            <div class="servicio-card">
-                <h3>Restauración de Marcos</h3>
-                <p>Trabajo artesanal de reparación, conservación de marcos y dorados antiguos de todo tipo.</p>
-            </div>
-
-        </div>
-    </section>
-
+    <!-- SECCIÓN PORTFOLIO (INICIO) -->
     <section id="portfolio">
-        <h2 class="titulo-seccion">Proyectos y Portfolio</h2>
-        
+        <h2 class="titulo-seccion">Galería de Trabajos</h2>
+
+        <!-- Tarjetas Filtro -->
         <div class="filtros-portfolio">
-            <button class="btn-filtro" data-filtro="arquitectura">Arquitectura</button>
-            <button class="btn-filtro activo" data-filtro="arte">Arte y Marcos</button>
-            <button class="btn-filtro" data-filtro="autoria">Obra de Autoría</button>
+            <div class="servicio-card btn-filtro activo" data-filtro="autoria">
+                <h3>Escultura</h3>
+                <p>Creación de obras escultóricas originales de autoría propia y restauración.</p>
+            </div>
+            
+            <div class="servicio-card btn-filtro" data-filtro="arte">
+                <h3>Restauración de Antigüedades</h3>
+                <p>Conservación, reparación, dorados antiguos, restauración de marcos y piezas deterioradas.</p>
+            </div>
+            
+            <div class="servicio-card btn-filtro" data-filtro="arquitectura">
+                <h3>Arquitectura y Reformas</h3>
+                <p>Planificación y ejecución de obras de restauración arquitectónica.</p>
+            </div>
         </div>
 
+        <!-- Grilla de Imágenes y Videos -->
         <div class="galeria-grid">
-            <!-- APARTADO ARQUITECTURA -->
-            <div class="carrusel-arq-wrapper galeria-item" data-categoria="arquitectura">
-                <div class="carrusel-arq-grid" id="carrusel-grid">
-                    <div class="carrusel-estado activo-estado" id="estado-antes">
-                        <div class="galeria-item-foto">
-                            <img src="img/arquiantes 1.jpeg" alt="Antes - Restauración de inmueble 1">
-                        </div>
-                        <div class="galeria-item-foto">
-                            <img src="img/arquiantes 2.jpeg" alt="Antes - Restauración de inmueble 2">
-                        </div>
-                        <div class="galeria-item-foto">
-                            <img src="img/arquiantes 3.jpeg" alt="Antes - Restauración de inmueble 3">
-                        </div>
-                        <div class="galeria-item-foto">
-                            <img src="img/arquiantes 4.jpeg" alt="Antes - Restauración de inmueble 4">
-                        </div>
-                    </div>
-                    <div class="carrusel-estado" id="estado-despues">
-                        <div class="galeria-item-foto">
-                            <img src="img/arquitectura 1.jpeg" alt="Después - Restauración de inmueble 1">
-                        </div>
-                        <div class="galeria-item-foto">
-                            <img src="img/arquitectura 2.jpeg" alt="Después - Restauración de inmueble 2">
-                        </div>
-                        <div class="galeria-item-foto">
-                            <img src="img/arquitectura 3.jpeg" alt="Después - Restauración de inmueble 3">
-                        </div>
-                        <div class="galeria-item-foto">
-                            <img src="img/arquitectura 4.jpeg" alt="Después - Restauración de inmueble 4">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="carrusel-controles-inferiores">
-                    <button class="carrusel-flecha" id="carrusel-prev" aria-label="Ver Antes">&#8592;</button>
-                    <div class="carrusel-etiqueta" id="carrusel-etiqueta">Restauración de inmuebles - Antes</div>
-                    <button class="carrusel-flecha" id="carrusel-next" aria-label="Ver Después">&#8594;</button>
-                </div>
-            </div>
-
-            <!-- Nuevas imágenes de arquitectura agregadas antes del video -->
-            <div class="galeria-item" data-categoria="arquitectura">
-                <img src="img/camioneta.jpg" alt="Camioneta de Roma para las reformas de edificios y departamentos">
-                <div class="galeria-overlay">
-                    <h4>Camioneta de Roma</h4>
-                    <p>para las reformas de edificios y departamentos</p>
-                </div>
-            </div>
-
-            <div class="galeria-item" data-categoria="arquitectura">
-                <img src="img/noticia.jpg" alt="Nota periodística sobre Giorgio Contini">
-                <div class="galeria-overlay">
-                    <h4>Nota periodística</h4>
-                </div>
-            </div>
-
-            <div class="galeria-item" data-categoria="arquitectura">
-                <img src="img/noticia 2.jpg" alt="Nota periodística sobre Giorgio Contini">
-                <div class="galeria-overlay">
-                    <h4>Nota periodística</h4>
-                </div>
-            </div>
-
-            <div class="galeria-item" data-categoria="arquitectura" style="grid-column: 1 / -1; margin-top: 2rem;">
-                <div class="video-contenedor">
-                    <iframe src="https://www.youtube.com/embed/wGQtU9xlPjw" title="Giorgio Contini - Video de Restauración" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- APARTADO ARTE Y MARCOS -->
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/espejo roto.jpeg" alt="Espejo antiguo roto - Estado inicial">
-                <div class="galeria-overlay">
-                    <h4>Espejo Antiguo (Antes)</h4>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/espejo restauracion.jpeg" alt="Espejo restaurado - Estado final">
-                <div class="galeria-overlay">
-                    <h4>Espejo Antiguo (Después)</h4>
-                </div>
-            </div>
-
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/marco 1.jpeg" alt="Restauración de marco 1">
-                <div class="galeria-overlay">
-                    <h4>Marco</h4>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/marco 2.jpeg" alt="Restauración de marco 2">
-                <div class="galeria-overlay">
-                    <h4>Marco</h4>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/marco 3.jpeg" alt="Restauración de marco 3">
-                <div class="galeria-overlay">
-                    <h4>Marco</h4>
-                </div>
-            </div>
-
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/La biela antes.jpg" alt="La Biela - Antes de la restauración">
-                <div class="galeria-overlay">
-                    <h4>La biela</h4>
-                    <p>antes de la restauración</p>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/la biela 1.jpeg" alt="La Biela - Restauración 1">
-                <div class="galeria-overlay">
-                    <h4>Restauración La Biela</h4>
-                    <p>Jorge Luis Borges La Biela Recoleta</p>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/la biela 2.jpeg" alt="La Biela - Restauración 2">
-                <div class="galeria-overlay">
-                    <h4>Restauración La Biela</h4>
-                    <p>Jorge Luis Borges La Biela Recoleta</p>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/la biela 3.jpeg" alt="La Biela - Restauración 3">
-                <div class="galeria-overlay">
-                     <h4>Restauración La Biela</h4>
-                    <p>Jorge Luis Borges La Biela Recoleta</p>
-                </div>
-            </div>
-            <div class="galeria-item" data-categoria="arte">
-                <img src="img/La biela 4.jpeg" alt="La Biela - Restauración 4">
-                <div class="galeria-overlay">
-                    <h4>Restauración La Biela</h4>
-                    <p>Jorge Luis Borges La Biela Recoleta</p>
-                </div>
-            </div>
-
-            <!-- APARTADO OBRA DE AUTORÍA -->
+            <!-- 1. APARTADO ESCULTURA -->
             <div class="galeria-item" data-categoria="autoria">
-                <img src="img/negros venecianos.jpeg" alt="Negros Venecianos - Obra original de Giorgio Contini">
+                <img src="img/la biela 3.jpeg" alt="Restauración La Biela 3">
                 <div class="galeria-overlay">
-                    <h4>Negros Venecianos</h4>
-                    <p>Obra original de autoría propia</p>
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 6.jpg" alt="Restauración La Biela 6">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 10.jpg" alt="Restauración La Biela 10">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 9.jpg" alt="Restauración La Biela 9">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 2.jpeg" alt="Restauración La Biela 2">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 7.jpg" alt="Restauración La Biela 7">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 8.jpg" alt="Restauración La Biela 8">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 4.jpeg" alt="Restauración La Biela 4">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/la biela 11.jpeg" alt="Restauración La Biela 11">
+                <div class="galeria-overlay">
+                    <h4>Restauración La Biela</h4>
+                    <p>Jorge Luis Borges La Biela Recoleta 2026</p>
                 </div>
             </div>
             <div class="galeria-item" data-categoria="autoria">
                 <img src="img/negros venecianos 2.jpeg" alt="Negros Venecianos 2 - Obra original de Giorgio Contini">
                 <div class="galeria-overlay">
                     <h4>Negros Venecianos</h4>
-                    <p>Obra original de autoría propia</p>
+                    <p>Obra original de autoría propia realizadas entre 2020 y 2023</p>
                 </div>
             </div>
-
-            <!-- Nueva imagen de agradecimiento agregada antes del video -->
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/negros venecianos 3.jpeg" alt="Negros Venecianos 3 - Obra original de Giorgio Contini">
+                <div class="galeria-overlay">
+                    <h4>Negros Venecianos</h4>
+                    <p>Obra original de autoría propia realizadas entre 2020 y 2023</p>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="autoria">
+                <img src="img/negros venecianos.jpeg" alt="Negros Venecianos - Obra original de Giorgio Contini">
+                <div class="galeria-overlay">
+                    <h4>Negros Venecianos</h4>
+                    <p>Obra original de autoría propia realizadas entre 2020 y 2023</p>
+                </div>
+            </div>
             <div class="galeria-item" data-categoria="autoria">
                 <img src="img/agradecimiento.jpg" alt="Agradecimiento a José Luis">
                 <div class="galeria-overlay">
@@ -261,7 +171,215 @@
 
             <div class="galeria-item" data-categoria="autoria" style="grid-column: 1 / -1; margin-top: 2rem;">
                 <div class="video-contenedor">
-                    <iframe src="https://www.youtube.com/embed/fqDfW-lo7PU" title="Giorgio Contini - Video de agradecimientos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/1q2Ec4LKEvo" title="Giorgio Contini - Video de agradecimientos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 2. APARTADO RESTAURACIÓN DE ANTIGÜEDADES -->
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 1.png" alt="Restauración de antigüedades 1">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 2.png" alt="Restauración de antigüedades 2">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 3.jpeg" alt="Restauración de antigüedades 3">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 4.jpeg" alt="Restauración de antigüedades 4">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 5.png" alt="Restauración de antigüedades 5">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 6.jpeg" alt="Restauración de antigüedades 6">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 7.jpeg" alt="Restauración de antigüedades 7">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 8.jpeg" alt="Restauración de antigüedades 8">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 9.png" alt="Restauración de antigüedades 9">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 10.jpeg" alt="Restauración de antigüedades 10">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 11.jpeg" alt="Restauración de antigüedades 11">
+                <div class="galeria-overlay">
+                    <h4>Restauración</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 12.jpeg" alt="Restauración de antigüedades 12">
+                <div class="galeria-overlay">
+                    <h4>Restauración</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 13.jpeg" alt="Restauración de antigüedades 13">
+                <div class="galeria-overlay">
+                    <h4>Restauración</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arte">
+                <img src="img/restauracion 14.jpeg" alt="Restauración de antigüedades 14">
+                <div class="galeria-overlay">
+                    <h4>Restauración de Marco</h4>
+                </div>
+            </div>
+
+            <!-- 3. APARTADO ARQUITECTURA -->
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 1.jpeg" alt="Arquitectura y Reformas 1">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 2.jpeg" alt="Arquitectura y Reformas 2">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 3.jpeg" alt="Arquitectura y Reformas 3">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 4.jpeg" alt="Arquitectura y Reformas 4">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 5.jpeg" alt="Arquitectura y Reformas 5">
+                <div class="galeria-overlay">
+                    <h4>Coconut Grove, Fl.</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 6.jpeg" alt="Arquitectura y Reformas 6">
+                <div class="galeria-overlay">
+                    <h4>Coconut Grove, Fl.</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 7.jpeg" alt="Arquitectura y Reformas 7">
+                <div class="galeria-overlay">
+                    <h4>Coconut Grove, Fl.</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 8.jpeg" alt="Arquitectura y Reformas 8">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 9.jpeg" alt="Arquitectura y Reformas 9">
+                <div class="galeria-overlay">
+                    <h4>Miami Fl.</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 10.jpeg" alt="Arquitectura y Reformas 10">
+                <div class="galeria-overlay">
+                    <h4>Miami Fl.</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 11.jpeg" alt="Arquitectura y Reformas 11">
+                <div class="galeria-overlay">
+                    <h4>Miami Fl.</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 12.jpeg" alt="Arquitectura y Reformas 12">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 13.jpeg" alt="Arquitectura y Reformas 13">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 14.jpeg" alt="Arquitectura y Reformas 14">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 15.jpeg" alt="Arquitectura y Reformas 15">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 16.jpeg" alt="Arquitectura y Reformas 16">
+                <div class="galeria-overlay">
+                    <h4>Bs.As. Argentina</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-categoria="arquitectura">
+                <div class="video-contenedor">
+                    <iframe src="https://www.youtube.com/embed/GXaOmOn4CEU" title="Giorgio Contini - Restauración" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 18.jpg" alt="Arquitectura y Reformas 18">
+                <div class="galeria-overlay">
+                    <h4>Roma Italy</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 19.png" alt="Arquitectura y Reformas 19">
+                <div class="galeria-overlay">
+                    <h4>Roma Italy</h4>
+                </div>
+            </div>
+            <div class="galeria-item" data-categoria="arquitectura">
+                <img src="img/reformas 20.jpeg" alt="Arquitectura y Reformas 20">
+                <div class="galeria-overlay">
+                    <h4>Roma Italy</h4>
                 </div>
             </div>
         </div>
@@ -300,6 +418,11 @@
     <footer>
         <p>&copy; 2026 Giorgio Contini - Arquitectura, Diseño y Restauración. Buenos Aires, Argentina.</p>
     </footer>
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-cerrar">&times;</span>
+        <img class="lightbox-contenido" id="lightbox-img" alt="Imagen ampliada">
+        <div id="lightbox-caption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
