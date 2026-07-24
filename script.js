@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-links a');
 
     if (menuToggle && navContainer) {
-        // Al hacer clic en el botón, abre/cierra el menú móvil
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             navContainer.classList.toggle('active');
         });
 
-        // Si se hace clic en cualquier enlace, cierra automáticamente el menú para mostrar la sección
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
@@ -21,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // LÓGICA DE FILTRADO INTERACTIVO DEL PORTFOLIO
+    // LÓGICA DE FILTRADO INTERACTIVO Y DESPLAZAMIENTO DEL PORTFOLIO
     const botonesFiltro = document.querySelectorAll('.btn-filtro');
     const itemsGaleria = document.querySelectorAll('.galeria-item');
+    const galeriaGrid = document.querySelector('.galeria-grid');
 
-    // Función encargada de aplicar el filtro visual
     function aplicarFiltro(filtro) {
         itemsGaleria.forEach(item => {
             const categoria = item.getAttribute('data-categoria');
@@ -43,64 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // CORRECCIÓN: Inicializa mostrando 'arte' por defecto en lugar de 'arquitectura'
-    aplicarFiltro('arte');
+    // Filtro por defecto al cargar la página
+    aplicarFiltro('autoria');
 
     botonesFiltro.forEach(boton => {
         boton.addEventListener('click', () => {
+            // Actualizar clase activa en la tarjeta seleccionada
             botonesFiltro.forEach(b => b.classList.remove('activo'));
             boton.classList.add('activo');
+            
+            // Aplicar filtro de imágenes
             const filtroSeleccionado = boton.getAttribute('data-filtro');
             aplicarFiltro(filtroSeleccionado);
+
+            // Desplazamiento suave hacia las imágenes
+            if (galeriaGrid) {
+                galeriaGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
-
-
-    // LÓGICA DEL CARRUSEL (ANTES / DESPUÉS)
-    const btnPrev = document.getElementById('carrusel-prev');
-    const btnNext = document.getElementById('carrusel-next');
-    const estadoAntes = document.getElementById('estado-antes');
-    const estadoDespues = document.getElementById('estado-despues');
-    const etiqueta = document.getElementById('carrusel-etiqueta');
-
-    if (btnPrev && btnNext && estadoAntes && estadoDespues && etiqueta) {
-        let mostrandoAntes = true;
-
-        function cambiarEstado(mostrarAntes, dirDesde) {
-            if (mostrandoAntes === mostrarAntes) return;
-
-            const saliente = mostrandoAntes ? estadoAntes : estadoDespues;
-            const entrante = mostrarAntes ? estadoAntes : estadoDespues;
-            const claseSalida = dirDesde === 'izq' ? 'saliendo-izq' : 'saliendo-der';
-
-            saliente.classList.add(claseSalida);
-            saliente.classList.remove('activo-estado');
-
-            setTimeout(() => {
-                saliente.classList.remove(claseSalida);
-                entrante.style.transform = dirDesde === 'izq' ? 'translateX(-40px)' : 'translateX(40px)';
-                entrante.classList.add('activo-estado');
-                entrante.style.transform = '';
-            }, 300);
-
-            // ACTUALIZACIÓN DE TEXTO SOLICITADO
-            etiqueta.style.opacity = '0';
-            setTimeout(() => {
-                etiqueta.textContent = mostrarAntes ? 'Restauración de inmuebles - Antes' : 'Restauración de inmuebles - Después';
-                etiqueta.style.opacity = '1';
-            }, 220);
-
-            mostrandoAntes = mostrarAntes;
-        }
-
-        btnPrev.addEventListener('click', () => {
-            if (!mostrandoAntes) cambiarEstado(true, 'der');
-        });
-
-        btnNext.addEventListener('click', () => {
-            if (mostrandoAntes) cambiarEstado(false, 'izq');
-        });
-    }
 
 
     // CONTROL DEL FORMULARIO DE CONTACTO
@@ -112,4 +71,58 @@ document.addEventListener('DOMContentLoaded', () => {
             formulario.reset();
         });
     }
+
+
+    // LÓGICA DEL LIGHTBOX (VISOR DE IMÁGENES EN PANTALLA COMPLETA)
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const botonCerrar = document.querySelector('.lightbox-cerrar');
+
+    // Escuchar el clic en cada tarjeta de la galería
+    document.querySelectorAll('.galeria-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Ignorar los elementos que contienen video (iframes)
+            if (item.querySelector('iframe')) return;
+
+            const img = item.querySelector('img');
+            const overlay = item.querySelector('.galeria-overlay');
+
+            if (img && lightbox) {
+                lightbox.style.display = 'block';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                
+                // Copiar el contenido explicativo de la tarjeta debajo de la foto ampliada
+                if (overlay) {
+                    lightboxCaption.innerHTML = overlay.innerHTML;
+                } else {
+                    lightboxCaption.innerHTML = '';
+                }
+            }
+        });
+    });
+
+    // Cerrar al hacer clic en la "X"
+    if (botonCerrar) {
+        botonCerrar.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    }
+
+    // Cerrar al hacer clic en la zona oscura del fondo
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    }
+
+    // Cerrar al presionar la tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox && lightbox.style.display === 'block') {
+            lightbox.style.display = 'none';
+        }
+    });
 });
