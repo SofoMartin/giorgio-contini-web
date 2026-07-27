@@ -73,56 +73,80 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // LÓGICA DEL LIGHTBOX (VISOR DE IMÁGENES EN PANTALLA COMPLETA)
+    // LÓGICA DEL LIGHTBOX CON CAPTURA DEL BOTÓN ATRÁS (MOBILE)
     const lightbox = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const botonCerrar = document.querySelector('.lightbox-cerrar');
 
-    // Escuchar el clic en cada tarjeta de la galería
+    let lightboxAbierto = false;
+
+    // Abrir el visor y registrar la navegación ficticia en el historial
+    function abrirLightbox(imgSrc, imgAlt, captionHtml) {
+        lightbox.style.display = 'block';
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = imgAlt;
+        lightboxCaption.innerHTML = captionHtml;
+
+        if (!lightboxAbierto) {
+            lightboxAbierto = true;
+            history.pushState({ lightboxOpen: true }, '');
+        }
+    }
+
+    // Cerrar el visor de forma limpia
+    function cerrarLightbox(desdeHistorial = false) {
+        if (!lightboxAbierto) return;
+
+        lightbox.style.display = 'none';
+        lightboxAbierto = false;
+
+        // Si se cerró con el botón X o la zona oscura, limpiamos la entrada creada en el historial
+        if (!desdeHistorial && window.history.state && window.history.state.lightboxOpen) {
+            history.back();
+        }
+    }
+
+    // Clic en elementos de la galería
     document.querySelectorAll('.galeria-item').forEach(item => {
-        item.addEventListener('click', (e) => {
-            // Ignorar los elementos que contienen video (iframes)
+        item.addEventListener('click', () => {
             if (item.querySelector('iframe')) return;
 
             const img = item.querySelector('img');
             const overlay = item.querySelector('.galeria-overlay');
 
             if (img && lightbox) {
-                lightbox.style.display = 'block';
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                
-                // Copiar el contenido explicativo de la tarjeta debajo de la foto ampliada
-                if (overlay) {
-                    lightboxCaption.innerHTML = overlay.innerHTML;
-                } else {
-                    lightboxCaption.innerHTML = '';
-                }
+                const caption = overlay ? overlay.innerHTML : '';
+                abrirLightbox(img.src, img.alt, caption);
             }
         });
     });
 
-    // Cerrar al hacer clic en la "X"
+    // Cerrar con el botón "X"
     if (botonCerrar) {
-        botonCerrar.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
+        botonCerrar.addEventListener('click', () => cerrarLightbox(false));
     }
 
-    // Cerrar al hacer clic en la zona oscura del fondo
+    // Cerrar al tocar el fondo oscuro
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
-                lightbox.style.display = 'none';
+                cerrarLightbox(false);
             }
         });
     }
 
-    // Cerrar al presionar la tecla Escape
+    // Cerrar con la tecla Escape
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox && lightbox.style.display === 'block') {
-            lightbox.style.display = 'none';
+        if (e.key === 'Escape' && lightboxAbierto) {
+            cerrarLightbox(false);
+        }
+    });
+
+    // Detectar el botón "Atrás" del celular/navegador
+    window.addEventListener('popstate', () => {
+        if (lightboxAbierto) {
+            cerrarLightbox(true);
         }
     });
 });
